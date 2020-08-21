@@ -1,0 +1,34 @@
+{
+	"manifest_version": 2,
+	"name": "Cat防老眼昏花插件",
+	"version": "2.0.0",
+	"description": "看指标再也不用上下拉动了",
+	"icons":
+	{
+		"16": "images/favicon.png",
+		"48": "images/favicon.png",
+		"128": "images/favicon.png"
+	},
+	"browser_action": 
+	{
+		"default_icon": "images/favicon.png",
+		"default_title": "Cat防老眼昏花插件",
+		"default_popup": "html/popup.html"
+	},
+	"content_scripts": 
+	[
+		{
+			"matches": ["http://cat.koolearn-inc.com/*", "https://cat.koolearn-inc.com/*"],
+			"js": ["js/base.js"],
+			"run_at": "document_idle"
+		}
+  ],
+	"permissions":
+	[
+		"tabs",
+		"http://*/*", 
+		"https://*/*"
+	],
+	"web_accessible_resources": ["js/cat-th.js"],
+	"homepage_url": "https://github.com/CasterWx"
+}
