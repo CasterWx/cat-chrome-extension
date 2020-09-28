@@ -18,7 +18,7 @@
 	"content_scripts": 
 	[
 		{
-			"matches": ["http://cat.koolearn-inc.com/*", "https://cat.koolearn-inc.com/*"],
+			"matches": ["http://*", "https://*"],
 			"js": ["js/base.js"],
 			"run_at": "document_idle"
 		}
